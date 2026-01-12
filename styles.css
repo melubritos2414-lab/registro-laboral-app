@@ -1,0 +1,446 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f2f5f9;
+    padding: 0px;
+}
+.container {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    color: #2757db;
+    text-align: center;
+    margin-bottom: 20px;
+}
+h2 {
+    color: #00040ede;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.campo-lugar {
+    width: 100%;
+    font-size: 16px;
+}
+.app {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: oklch(64.043% 0.17826 263.354);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 15px 0;
+    border: 1px solid hwb(0 35% 65%);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+button {
+    background-color:#1f4fd8;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 4px;
+    cursor: not-allowed;
+}
+button:hover {
+    background: color #174fa3;
+}
+input[type="file"] {
+    margin-top: 10px;
+}
+textarea {
+    width: 100%;
+    height: 150px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-family: monospace;
+}
+label {
+    font-weight: bold;
+    color: #333;
+}
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #666;
+}
+a {
+    color: lch(31.79% 39.49 27.61);
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+header, main, footer {
+    margin-bottom: 20px;
+}
+nav {
+    margin-bottom: 20px;
+}
+nav button {
+    margin-right: 10px;
+}
+nav button:last-child {
+    margin-right: 0;
+}
+section {
+    margin-bottom: 30px;
+}
+section h2 {
+    margin-bottom: 15px;
+}
+.section-content {
+    background-color: lab(95.88% 0.54 0.96);
+    padding: 15px;
+    border-radius: 6px;
+}
+.section-content p {
+    margin: 10px 0;
+}
+.section-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+.section-content li {
+    margin: 5px 0;
+}
+.section-content input[type="text"],
+.section-content input[type="number"] {
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+}
+.section-content button {
+    margin-top: 10px;
+}
+.section-content hr {
+    margin: 20px 0;
+}
+.section-content label {
+    display: block;
+    margin-bottom: 5px;
+}
+.section-content textarea {
+    font-family: inherit;
+    font-size: 1em;
+}
+.section-content .output {
+    background-color: lab(90% 0 0);
+    padding: 10px;
+    border-radius: 4px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+.section-content .output p {
+    margin: 0;
+}
+.section-content .output ul {
+    padding-left: 20px;
+}
+.section-content .output li {
+    margin: 3px 0;
+}
+.hidden {
+    display: none;
+}
+.error {
+    color: red;
+    font-weight: bold;
+}
+.success {
+    color: green;
+    font-weight: bold;
+}
+.info {
+    color: blue;
+    font-weight: bold;
+}
+.highlight {
+    background-color: yellow;
+}
+.button-group {
+    margin-top: 10px;
+}
+.button-group button {
+    margin-right: 10px;
+}
+.button-group button:last-child {
+    margin-right: 0;
+}
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 100%;
+}
+.modal-content h3 {
+    margin-top: 0;
+}
+.modal-content button {
+    margin-top: 15px;
+}
+@media print {
+    body {
+     visibility:hidden;
+    }
+    #lista, #lista * {
+        visibility:visible;
+    }
+    #lista {
+        position:absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+}
+#registroTabla {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+#registroTabla th {
+  background-color: #1f4fd8;
+  color: white;
+  padding: 12px 20px;
+  text-align: left;
+  font-weight: bold;
+}
+
+#registroTabla td {
+  padding: 12px 40px;
+  border-bottom: 1px solid #ccc;
+}
+@media print {
+  /* Solo se imprime lo que está dentro de #lista */
+  body * { visibility: hidden; }
+  #lista, #lista * { visibility: visible; }
+  #lista { position: absolute; left: 0; top: 0; width: 100%; }
+
+  /* Tabla tipo Excel */
+  #registroTabla { 
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  #registroTabla th,
+  #registroTabla td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: left;
+  }
+
+  #registroTabla th {
+    font-weight: bold;
+  }
+}
+@media (max-width: 600px) {
+    body {
+        margin: 10px;
+    }
+    .container {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    input, button {
+        font-size: 14px;
+    }
+}
+@media (max-width: 400px) {
+    h1 {
+        font-size: 20px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    input, button {
+        font-size: 12px;
+    }
+}
+@media print {
+    body {
+        visibility: hidden;
+    }
+    #lista, #lista * {
+        visibility: visible;
+    }
+    #lista {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+}
+#registroTabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+/* Por defecto NO mostrar el header de impresión en pantalla */
+.print-only { display: none; }
+
+/* En impresión sí se muestra */
+@media print {
+  .print-only { display: block; }
+  #printHeader h2 { margin: 0 0 6px 0; }
+  #printHeader p { margin: 0 0 4px 0; }
+}
+@media print {
+  /* Solo se imprime lo que está dentro de #lista */
+  body * { visibility: hidden; }
+  #lista, #lista * { visibility: visible; }
+  #lista { position: absolute; left: 0; top: 0; width: 100%; }
+
+  /* Tabla tipo Excel */
+  #registroTabla { 
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  #registroTabla th,
+  #registroTabla td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: left;
+  }
+
+  #registroTabla th {
+    font-weight: bold;
+  }
+}
+@media (max-width: 600px) {
+    body {
+        margin: 10px;
+    }
+    .container {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    input, button {
+        font-size: 14px;
+    }
+}
+@media (max-width: 400px) {
+    h1 {
+        font-size: 20px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    input, button {
+        font-size: 12px;
+    }
+}
+/* ===== SOLO PARA IMPRIMIR ===== */
+@media print {
+  /* Oculta botones, inputs y controles */
+  button,
+  input,
+  #filtrarMesBtn,
+  #guardarBtn,
+  #eliminarBtn,
+  #exportarBtn,
+  #importarBtn,
+  #importarInput,
+  #guardarNombreBtn {
+    display: none !important;
+  }
+
+  /* Oculta el título grande de la app (si no quieres que salga) */
+  h1 {
+    display: none !important;
+  }
+
+  /* Ajusta márgenes para que quede más limpio */
+  body {
+    margin: 0;
+  }
+
+  /* La parte que quieres imprimir: que use todo el ancho */
+  #lista {
+    width: 100%;
+  }
+}
+@media print {
+
+  /* Oculta el bloque del filtro del mes (label + input + botón) */
+  label[for="mesFiltro"],
+  #mesFiltro,
+  #filtrarMesBtn,
+  #filtrarMesBtn + br {
+    display: none !important;
+  }
+
+  /* Si te queda el texto “mes imprimir :” en algún contenedor, esto ayuda */
+  #lista label {
+    display: none !important;
+  }
+}
+@media print {
+  #registroTabla {
+    width: 100% !important;
+    border-collapse: collapse;
+  }
+
+  #registroTabla th,
+  #registroTabla td {
+    padding: 8px 12px;
+  }
+}
+@media print {
+  /* Encabezado */
+  #lista h1, #lista h2, #lista h3 { margin: 0 0 8px 0; }
+  #lista p { margin: 2px 0; }
+
+  /* Tabla prolija */
+  #registroTabla {
+    width: 100% !important;
+    border-collapse: collapse;
+    margin-top: 12px;
+    font-size: 12pt;
+  }
+
+  #registroTabla th, #registroTabla td {
+    border: 1px solid #444;
+    padding: 8px 10px;
+    text-align: left;
+  }
+
+  #registroTabla th {
+    background: #eee !important;
+    color: #000 !important;
+  }
+}
+/* ===== FIN SOLO PARA IMPRIMIR ===== */
+
