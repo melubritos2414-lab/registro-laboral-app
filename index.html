@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Laboral</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="icon" type="image/png" href="favicon.png/icon-192.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#1f4fd8">
+
+    
+    
+</head>
+<body>
+    <div class="container">
+        <h1>REGISTRO LABORAL</h1>
+        <!--A)nombre (una sola vez)-->
+            <label for="nombre">Nombre Y Apellido:</label>
+            <input type="text" id="nombre" required>
+            <button type="button" id="guardarNombreBtn">Guardar Nombre</button>
+        
+            <!--B)registro diario-->
+            <div class="form-group">
+               <label for="puesto">Lugar de Trabajo:</label>
+               <input type="text" id="puesto" class="campo-lugar">
+    </div>
+            <label for="fecha_inicio">Fecha:</label>
+            <input type="date" id="fecha_inicio" name="fecha_inicio" required><br><br>
+
+            <button type="button" id="guardarBtn">Guardar</button>
+            <button type="button" id="imprimirBtn">Imprimir</button>
+            <button type="button" id="eliminarBtn">Eliminar</button>
+
+            <input type="file" id="importarInput" accept="application/json">
+            <button type="button" id="exportarBtn">Exportar</button>
+             <button type="button" id="importarBtn">Importar</button>
+           
+            <div id="lista">
+                <div id="printHear" class="print-only">
+                    ...
+                </div>
+           
+             <hr> 
+             <label for="mesFiltro"> mes imprimir :</label>
+                <input type="month" id="mesFiltro" name="mesFiltro">
+                <button type="button" id="filtrarMesBtn">ver mes</button>
+                <div id="printHeader" class="print-only">
+             <h2>Registro laboral</h2>
+             <p><strong>Nombre:</strong> <span id="printNombre"></span></p>
+             <p><strong>Mes:</strong> <span id="printMes"></span></p>
+            <hr>
+           </div>
+           <div id="printArea">
+         <!-- aquí van: Registro laboral + Nombre + Mes + tabla -->
+           </div>
+
+          <table id="registroTabla">
+                    <thead>
+                        <tr>
+                            <th>Acciones</th>
+                            
+                            <th>Fecha</th>
+
+                            <th>Lugar</th>
+
+                        </tr>
+                    </thead>
+                    <tbody id="tablaBody">
+
+                        
+                    </tbody>
+                </table>
+             <h2>Registro</h2>   
+            </div>
+            </div>
+            
+       
+</body>
+</html>
